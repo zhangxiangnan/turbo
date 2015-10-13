@@ -10,6 +10,7 @@
 `brew install compass`
 
 3. 对于iojs和npm我们建议从 [iojs官网][iojs] 或[国内镜像][iojs-taobao]下载安装包安装。
+    - [taobao镜像](https://npm.taobao.org/), 即可解决npm可能存在跨域
 
 ### 安装
 1. 克隆本仓库代码
@@ -27,7 +28,8 @@
 
 #### 本地开发
 1. `gulp live`, 监听文件变化，也实现动态刷新浏览器功能
-    - 无论是scss还是hbs变化，服务会动态编译增量代码和自动刷新浏览器
+    - 请先安装livereload谷歌插件，[livereload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+    - 无论是scss还是hbs变化，服务会动态编译增量代码, 并且自动刷新浏览器
 2. `npm run mock`, 监听文件变化，也实现动态刷新浏览器功能
     - 使用`json-server`, 起了APIs的服务，直接访问`http://localhost:3000`, 即可看到访问的APIs
 
@@ -45,7 +47,7 @@
 
 ##### v0.0.5
 - 在`Server`层增加`Config`
-- 基于`约定大于配置，配置大于编码`，可在Config里面定义huan
+- 基于`约定大于配置，配置大于编码`，可在Config里面定义我们需要的特殊数据
 
 ##### v0.0.4
 - 目录分层，从原来Express目录，分成`Client端`以及`Server`端
