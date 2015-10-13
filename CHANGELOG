@@ -1,0 +1,34 @@
+#### ChangeLog
+----
+
+##### v0.06
+- 热插拔，gulp-livereload，支持开发时，文件变化即更新刷新当前页面
+- 动态监听css文件变化，增量编译变化文件
+- 增加ChangeLog，增加README
+- 简单模拟mock服务
+    - 安装json-server
+    - 模拟文件在`./server/mock`
+    - `npm mock`
+
+##### v0.0.5
+- 在`Server`层增加`Config`
+- 基于`约定大于配置，配置大于编码`，可在Config里面定义huan
+
+##### v0.0.4
+- 目录分层，从原来Express目录，分成`Client端`以及`Server`端
+- 在`Server`端增加`route`,`views`,`helpers`,`middlewares`目录
+- **route** 负责路由
+- **views** 负责模板渲染
+- **middleware** 负责处理中间件
+- 目前已经增加处理`Error`的中间件
+##### v0.03
+- 增加gulp管理工具，集成自动化任务
+- css压缩，js检查等
+- 调研后，加入handlebars，作为node层的渲染模板
+
+##### v0.02
+- 目录分层，路由导向至route，在route/index进行路由分层
+- 引入compass-sass，增强处理sprite和css编译
+
+##### v0.0.1
+- 使用Express生成基础代码

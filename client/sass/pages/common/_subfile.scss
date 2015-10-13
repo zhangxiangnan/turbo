@@ -1,0 +1,16 @@
+@import 'helper/index';
+
+@import "sp/status/index";
+
+
+#common {
+    .icon {
+        display: inline-block;
+        height: status-sprite-height(warning_icon_triangle);
+        width: status-sprite-width(warning_icon_triangle);
+        vertical-align: middle;
+        @include status-sprite(warning_icon_triangle);
+        margin-bottom: .05rem;
+        margin-right: .05rem;
+    }
+}

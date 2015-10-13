@@ -1,0 +1,3 @@
+$supported-browsers: reject(browsers(), opera-mini, android);
+$browser-minimum-versions: (ie: '6');
+@import 'compass/css3';

@@ -1,0 +1,35 @@
+.cf {
+  zoom: 1;
+}
+
+.cf:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.status-sprite, #common .icon {
+  background-image: url('../../../si/status-sd4219f429a.png');
+  background-repeat: no-repeat;
+}
+
+#common .icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  background-position: 0 -78px;
+  margin-bottom: .05rem;
+  margin-right: .05rem;
+}
