@@ -13,9 +13,9 @@
 
 ### 安装
 1. 克隆本仓库代码
-`git clone https://github.com/konce/express-hbs-gulp-boiplate.git`
+`git clone https://github.com/zufangzi/turbo.git`
 2. 然后安装npm
-`cd express-hbs-gulp-boiplate; npm install`
+`cd turbo; npm install`
 
 ### 启动和本地开发
 #### 启动服务
