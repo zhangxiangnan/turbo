@@ -3,11 +3,14 @@
 
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
+    iconfont = require('gulp-iconfont'),
+    iconfontCss = require('gulp-iconfont-css'),
     jscs = require('gulp-jscs'),
     scsslint = require('gulp-scss-lint'),
     path = require('path'),
     compass = require('gulp-compass'),
     livereload = require('gulp-livereload'),
+    config = require('./server/config'),
     noop = function () {};
 
 gulp.task('jshint', function () {
@@ -21,6 +24,30 @@ gulp.task('jshint', function () {
 //     return gulp.src(['./client/js/**/*.js', '!./**/*.min.js'])
 //         .pipe(jscs());
 // });
+
+gulp.task('iconfont', function () {
+    return gulp.src()
+});
+
+var fontName = "bw-icons";
+var outputType = "css";
+var templatesPath = "./node_modules/gulp-iconfont-css/templates/_icons.";
+
+gulp.task('iconfont', function(){
+    gulp.src(['client/icons/*.svg'])
+    .pipe(iconfontCss({
+        fontName: fontName,
+        path: templatesPath + outputType,
+        targetPath: '../css/_' + fontName + outputType,
+        fontPath: '../fonts/'
+    }))
+    .pipe(iconfont({
+        fontName: fontName,
+        normalize: true
+    }))
+    .pipe(gulp.dest('./client/fonts/'));
+});
+
 
 gulp.task('scsslint', function () {
     gulp.src(['./client/**/*.scss'])

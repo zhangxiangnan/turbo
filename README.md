@@ -40,7 +40,10 @@
 
 ----
 
-##### v0.06
+##### v0.0.7
+- 增加node-inspector, 作为nodejs的调试器
+
+##### v0.0.6
 - 热插拔，gulp-livereload，支持开发时，文件变化即更新刷新当前页面
 - 动态监听css文件变化，增量编译变化文件
 - 增加ChangeLog，增加README
