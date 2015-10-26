@@ -25,11 +25,7 @@ gulp.task('jshint', function () {
 //         .pipe(jscs());
 // });
 
-gulp.task('iconfont', function () {
-    return gulp.src()
-});
-
-var fontName = "bw-icons";
+var fontName = "iconfonts";
 var outputType = "css";
 var templatesPath = "./node_modules/gulp-iconfont-css/templates/_icons.";
 
@@ -37,8 +33,9 @@ gulp.task('iconfont', function(){
     gulp.src(['client/icons/*.svg'])
     .pipe(iconfontCss({
         fontName: fontName,
+        cssClass: 'Icon',
         path: templatesPath + outputType,
-        targetPath: '../css/_' + fontName + outputType,
+        targetPath: '../css/' + fontName + '.' + outputType,
         fontPath: '../fonts/'
     }))
     .pipe(iconfont({
@@ -47,7 +44,6 @@ gulp.task('iconfont', function(){
     }))
     .pipe(gulp.dest('./client/fonts/'));
 });
-
 
 gulp.task('scsslint', function () {
     gulp.src(['./client/**/*.scss'])
@@ -71,6 +67,7 @@ gulp.task('live', function() {
     livereload.listen({start:true});
     // livereload();
     gulp.watch('client/sass/**/*.scss', ['compass']);
+    gulp.watch('client/icons/**/*.svg', ['iconfont']);
     // Dont watch .js files since the server will restart upon their changes.
     gulp.watch(['client/css/*.css', '**/*.hbs'], function (e) {
         livereload.changed(path.relative(__dirname, e.path));

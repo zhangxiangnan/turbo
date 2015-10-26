@@ -1,0 +1,45 @@
+@font-face {
+	font-family: "iconfonts";
+	src: url('../fonts/iconfonts.eot');
+	src: url('../fonts/iconfonts.eot?#iefix') format('eot'),
+		url('../fonts/iconfonts.woff') format('woff'),
+		url('../fonts/iconfonts.ttf') format('truetype'),
+		url('../fonts/iconfonts.svg#iconfonts') format('svg');
+}
+
+.Icon:before {
+	font-family: "iconfonts";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.Icon-aaaaa:before {
+	content: "\E001";
+}
+
+.Icon-bath:before {
+	content: "\E002";
+}
+
+.Icon-bed:before {
+	content: "\E003";
+}
+
+.Icon-car:before {
+	content: "\E004";
+}
+
+.Icon-test:before {
+	content: "\E005";
+}
+
+.Icon-wash:before {
+	content: "\E006";
+}
