@@ -42,6 +42,7 @@
 
 ##### v0.0.7
 - 增加node-inspector, 作为nodejs的调试器
+- 增加`iconfont`, 使用gulp管理，跨浏览器支持自定义新字体family
 
 ##### v0.0.6
 - 热插拔，gulp-livereload，支持开发时，文件变化即更新刷新当前页面
