@@ -31,9 +31,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // handle static resource
-app.use(express.static(path.resolve(__dirname + '/client')));
-app.use(express.static(path.resolve(__dirname + '/server/upload')));
-app.use(express.static(path.resolve(__dirname + '/server/files')));
+app.use(express.static(path.resolve('client')));
+// app.use(express.static(path.resolve(__dirname + '/server/upload')));
+// app.use(express.static(path.resolve(__dirname + '/server/files')));
 
 // @NOTE: compression
 app.use(compress());
