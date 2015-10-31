@@ -29,7 +29,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.resolve('client')));
+
+// handle static resource
+app.use(express.static(path.resolve(__dirname + '/client')));
+app.use(express.static(path.resolve(__dirname + '/server/upload')));
+app.use(express.static(path.resolve(__dirname + '/server/files')));
 
 // @NOTE: compression
 app.use(compress());
